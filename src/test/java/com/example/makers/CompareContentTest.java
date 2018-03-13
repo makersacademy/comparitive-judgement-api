@@ -25,11 +25,6 @@ public class CompareContentTest {
     }
 
     @Test
-    public void testingBeforeEach() {
-        assertNotEquals(content.getCodeSnippetOptionTwo(), "Img3");
-    }
-
-    @Test
     public void getCodeSnippetOptionOne() {
         assertEquals(content.getCodeSnippetOptionOne(), "Img1");
     }
@@ -38,5 +33,11 @@ public class CompareContentTest {
     public void setCodeSnippetOptionOne() {
         content.setCodeSnippetOptionOne("Img5");
         assertEquals(content.getCodeSnippetOptionOne(), "Img5");
+    }
+
+    @Test
+    public void testingBeforeEach() {
+        assertNotEquals(content.getCodeSnippetOptionOne(), "Img5");
+        assertNotEquals(content.getCodeSnippetOptionTwo(), "Img3");
     }
 }
