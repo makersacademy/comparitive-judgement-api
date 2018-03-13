@@ -36,5 +36,7 @@ public class CompareContentTest {
 
     @Test
     public void setCodeSnippetOptionOne() {
+        content.setCodeSnippetOptionOne("Img5");
+        assertEquals(content.getCodeSnippetOptionOne(), "Img5");
     }
 }
