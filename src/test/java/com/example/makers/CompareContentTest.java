@@ -20,7 +20,13 @@ public class CompareContentTest {
 
     @Test
     public void setCodeSnippetOptionTwo() {
+        content.setCodeSnippetOptionTwo("Img3");
+        assertEquals(content.getCodeSnippetOptionTwo(), "Img3");
+    }
 
+    @Test
+    public void testingBeforeEach() {
+        assertNotEquals(content.getCodeSnippetOptionTwo(), "Img3");
     }
 
     @Test
