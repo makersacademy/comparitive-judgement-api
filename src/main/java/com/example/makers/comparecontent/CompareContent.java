@@ -1,4 +1,4 @@
-package com.example.makers;
+package com.example.makers.comparecontent;
 
 public class CompareContent {
     private String codeSnippetOptionOne;

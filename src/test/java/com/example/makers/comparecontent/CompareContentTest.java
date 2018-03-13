@@ -1,4 +1,4 @@
-package com.example.makers;
+package com.example.makers.comparecontent;
 
 import org.junit.Before;
 import org.junit.Test;
