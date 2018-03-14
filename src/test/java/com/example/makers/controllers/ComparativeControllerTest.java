@@ -29,7 +29,7 @@ public class ComparativeControllerTest {
 
     @Test
     public void getContentRoute() throws Exception {
-        String resBody = "";
+        String resBody = "{codeSnippetOne:img1, codeSnippetTwo:img2}";
 
         this.mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
