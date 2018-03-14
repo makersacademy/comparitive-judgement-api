@@ -10,6 +10,9 @@ import java.util.ArrayList;
 public class CompareContent {
     private int id;
     private ArrayList<CodeSnippet> choices;
+
+
+
     private CodeSnippet chosenChoice;
 
     public CompareContent(int id, CodeSnippet codeSnippetOptionOne, CodeSnippet codeSnippetOptionTwo) {
@@ -19,14 +22,19 @@ public class CompareContent {
         this.choices.add(codeSnippetOptionTwo);
     }
 
+    public int getId() {
+        return id;
+    }
+
     public ArrayList<CodeSnippet> getChoices() {
         return choices;
     }
+
+    public CodeSnippet getChosenChoice() {
+        return chosenChoice;
+    }
+
+    public void setChosenChoice(CodeSnippet chosenChoice) {
+        this.chosenChoice = chosenChoice;
+    }
  }
-
-
-
-
-
-
-

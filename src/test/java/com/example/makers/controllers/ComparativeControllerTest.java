@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
@@ -29,16 +30,17 @@ public class ComparativeControllerTest {
 
     @Test
     public void getContentRoute() throws Exception {
-        String resBody = "{codeSnippetOne:img1, codeSnippetTwo:img2}";
+        String resBody = "{\"id\":5,\"choices\":[{\"id\":1,\"image\":\"img1\"},{\"id\":2,\"image\":\"img2\"}],\"chosenChoice\":null}";
 
-        this.mockMvc.perform(get("/"))
+        this.mockMvc.perform(get("/compare"))
                 .andExpect(status().isOk())
                 .andExpect(content().json(resBody));
     }
 
     @Test
     public void postContentRoute() throws Exception {
-
+        this.mockMvc.perform(post("/compare"))
+                .andExpect(status().isOk())
+                .andExpect(content().json("{\"id\":5,\"choices\":[{\"id\":1,\"image\":\"img1\"},{\"id\":2,\"image\":\"img2\"}],\"chosenChoice\":{\"id\":2,\"image\":\"img2\"}}"));
     }
 }
-

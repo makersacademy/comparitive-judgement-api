@@ -12,4 +12,8 @@ public class CodeSnippet {
     public String getImage() {
         return img;
     }
+
+    public int getId() {
+        return id;
+    }
 }
