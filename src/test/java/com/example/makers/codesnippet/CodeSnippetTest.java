@@ -15,6 +15,6 @@ public class CodeSnippetTest {
 
     @Test
     public void hasImage() {
-        assertEquals(option.getImage(), "img1");
+        assertEquals(option.getImg(), "img1");
     }
 }

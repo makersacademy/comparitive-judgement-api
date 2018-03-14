@@ -10,16 +10,16 @@ import java.util.ArrayList;
 public class CompareContent {
     private int id;
     private ArrayList<CodeSnippet> choices;
-
-
-
     private CodeSnippet chosenChoice;
 
-    public CompareContent(int id, CodeSnippet codeSnippetOptionOne, CodeSnippet codeSnippetOptionTwo) {
+    public CompareContent() {
+
+    }
+
+    public CompareContent(int id, ArrayList<CodeSnippet> snippets, CodeSnippet choice) {
         this.id = id;
-        this.choices = new ArrayList<>();
-        this.choices.add(codeSnippetOptionOne);
-        this.choices.add(codeSnippetOptionTwo);
+        this.choices = snippets;
+        this.chosenChoice = choice;
     }
 
     public int getId() {

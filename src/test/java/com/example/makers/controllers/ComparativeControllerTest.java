@@ -30,7 +30,7 @@ public class ComparativeControllerTest {
 
     @Test
     public void getContentRoute() throws Exception {
-        String resBody = "{\"id\":5,\"choices\":[{\"id\":1,\"image\":\"img1\"},{\"id\":2,\"image\":\"img2\"}],\"chosenChoice\":null}";
+        String resBody = "{\"id\":5,\"choices\":[{\"id\":1,\"img\":\"img1\"},{\"id\":2,\"img\":\"img2\"}],\"chosenChoice\":null}";
 
         this.mockMvc.perform(get("/compare"))
                 .andExpect(status().isOk())
@@ -41,6 +41,6 @@ public class ComparativeControllerTest {
     public void postContentRoute() throws Exception {
         this.mockMvc.perform(post("/compare"))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{\"id\":5,\"choices\":[{\"id\":1,\"image\":\"img1\"},{\"id\":2,\"image\":\"img2\"}],\"chosenChoice\":{\"id\":2,\"image\":\"img2\"}}"));
+                .andExpect(content().json("{\"id\":5,\"choices\":[{\"id\":1,\"img\":\"img1\"},{\"id\":2,\"img\":\"img2\"}],\"chosenChoice\":{\"id\":2,\"img\":\"img2\"}}"));
     }
 }

@@ -2,29 +2,26 @@ package com.example.makers.controllers;
 
 import com.example.makers.codesnippet.CodeSnippet;
 import com.example.makers.comparecontent.CompareContent;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import java.util.ArrayList;
 
 @RestController
 public class ComparativeController {
 
-    @GetMapping("/compare")
+    @RequestMapping(path="/compare", method= RequestMethod.GET)
     CompareContent getContent(){
         CodeSnippet optionOne = new CodeSnippet(1, "img1");
         CodeSnippet optionTwo = new CodeSnippet(2, "img2");
-        CompareContent content = new CompareContent(5, optionOne, optionTwo);
+        ArrayList<CodeSnippet> snippets = new ArrayList<CodeSnippet>();
+        snippets.add(optionOne);
+        snippets.add(optionTwo);
+        CompareContent content = new CompareContent(5,  snippets, null);
         return content;
     }
 
-    @PostMapping("/compare")
-    CompareContent postContent(){
-        CodeSnippet optionOne = new CodeSnippet(1, "img1");
-        CodeSnippet optionTwo = new CodeSnippet(2, "img2");
-        CompareContent content = new CompareContent(5, optionOne, optionTwo);
-        content.setChosenChoice(optionTwo);
+    @RequestMapping(path="/compare", method= RequestMethod.POST, produces={"application/json"})
+    CompareContent postContent(@RequestBody CompareContent content){
         return content;
     }
-
-
 }
