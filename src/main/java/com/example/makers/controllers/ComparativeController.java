@@ -2,7 +2,6 @@ package com.example.makers.controllers;
 
 import com.example.makers.codesnippet.CodeSnippet;
 import com.example.makers.comparecontent.CompareContent;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
@@ -20,7 +19,7 @@ public class ComparativeController {
         return content;
     }
 
-    @RequestMapping(path="/compare", method= RequestMethod.POST, produces={"application/json"})
+    @RequestMapping(path="/compare", method= RequestMethod.POST)
     CompareContent postContent(@RequestBody CompareContent content){
         return content;
     }
