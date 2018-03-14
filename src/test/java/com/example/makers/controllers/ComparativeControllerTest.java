@@ -29,10 +29,16 @@ public class ComparativeControllerTest {
 
     @Test
     public void getContentRoute() throws Exception {
-        String x = "{codeSnippetOne:img1, codeSnippetTwo:img2}";
+        String resBody = "";
+
         this.mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(content().json(x));
+                .andExpect(content().json(resBody));
+    }
+
+    @Test
+    public void postContentRoute() throws Exception {
+
     }
 }
 

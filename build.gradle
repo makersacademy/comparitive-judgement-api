@@ -28,5 +28,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
 	runtime('com.microsoft.sqlserver:mssql-jdbc')
 	runtime('org.postgresql:postgresql')
+	runtime('com.github.cliftonlabs:json-simple:3.0.2')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

@@ -1,27 +1,30 @@
 package com.example.makers.comparecontent;
 
+import com.example.makers.codesnippet.CodeSnippet;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+
 public class CompareContent {
-    private String codeSnippetOptionOne;
-    private String codeSnippetOptionTwo;
+    private int id;
+    private ArrayList<CodeSnippet> choices;
+    private CodeSnippet chosenChoice;
 
-    public String getCodeSnippetOptionTwo() {
-        return codeSnippetOptionTwo;
+    public CompareContent(int id, CodeSnippet codeSnippetOptionOne, CodeSnippet codeSnippetOptionTwo) {
+        this.id = id;
+        this.choices = new ArrayList<>();
+        this.choices.add(codeSnippetOptionOne);
+        this.choices.add(codeSnippetOptionTwo);
     }
 
-    public void setCodeSnippetOptionTwo(String codeSnippetOptionTwo) {
-        this.codeSnippetOptionTwo = codeSnippetOptionTwo;
+    public ArrayList<CodeSnippet> getChoices() {
+        return choices;
     }
+ }
 
-    public String getCodeSnippetOptionOne() {
-        return codeSnippetOptionOne;
-    }
 
-    public void setCodeSnippetOptionOne(String codeSnippetOptionOne) {
-        this.codeSnippetOptionOne = codeSnippetOptionOne;
-    }
 
-    public CompareContent(String codeSnippetOptionOne, String codeSnippetOptionTwo) {
-        this.codeSnippetOptionOne = codeSnippetOptionOne;
-        this.codeSnippetOptionTwo = codeSnippetOptionTwo;
-    }
-}
+
+
