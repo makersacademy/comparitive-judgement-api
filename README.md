@@ -39,7 +39,7 @@ Currently, we have the ability to build a container that will run the API with s
 
 - Install Docker
 - In the root of the repository, run the command `docker build . -t comparative-judgement-api`
-- Once it has built, run the command `docker run -t comparative-judgement-api -p 8080:8080`
+- Once it has built, run the command `docker run -p 8080:8080 -t comparative-judgement-api`
 - Visit http://localhost:8080/compare to validate that your API is up and running
 
 ####

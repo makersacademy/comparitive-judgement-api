@@ -4,6 +4,6 @@ VOLUME /tmp
 
 ADD /build/libs/comparative-judgement-api-0.0.1-SNAPSHOT.jar app.jar
 
-EXPOSE 80
+EXPOSE 8080
 
 ENTRYPOINT ["java","-jar","/app.jar"]
