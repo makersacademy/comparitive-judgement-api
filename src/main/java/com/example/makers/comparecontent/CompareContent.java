@@ -1,8 +1,6 @@
 package com.example.makers.comparecontent;
 
 import com.example.makers.codesnippet.CodeSnippet;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
