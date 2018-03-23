@@ -44,3 +44,10 @@ Currently, we have the ability to build a container that will run the API with s
 - Visit http://localhost:8080/compare to validate that your API is up and running
 
 ####
+
+###
+--- In Progress --- 
+
+Setting up a mock MongoDB so we can test it in the Docker container
+I am using this guide to set up some test data with a test database. https://spring.io/guides/gs/accessing-data-mongodb/
+
